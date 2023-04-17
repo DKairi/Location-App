@@ -16,6 +16,7 @@
 		184E9DDD29ECB4CC000597DF /* Location_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DDC29ECB4CC000597DF /* Location_AppTests.swift */; };
 		184E9DE729ECB4CC000597DF /* Location_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DE629ECB4CC000597DF /* Location_AppUITests.swift */; };
 		184E9DE929ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DE829ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift */; };
+		184E9DF629ECB8BF000597DF /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DF529ECB8BF000597DF /* GPSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		184E9DE229ECB4CC000597DF /* Location AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Location AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		184E9DE629ECB4CC000597DF /* Location_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_AppUITests.swift; sourceTree = "<group>"; };
 		184E9DE829ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		184E9DF529ECB8BF000597DF /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				184E9DC729ECB4CB000597DF /* SceneDelegate.swift */,
 				184E9DC929ECB4CB000597DF /* ViewController.swift */,
 				184E9DCB29ECB4CB000597DF /* Main.storyboard */,
+				184E9DF529ECB8BF000597DF /* GPSViewController.swift */,
 				184E9DCE29ECB4CC000597DF /* Assets.xcassets */,
 				184E9DD029ECB4CC000597DF /* LaunchScreen.storyboard */,
 				184E9DD329ECB4CC000597DF /* Info.plist */,
@@ -261,6 +264,7 @@
 				184E9DCA29ECB4CB000597DF /* ViewController.swift in Sources */,
 				184E9DC629ECB4CB000597DF /* AppDelegate.swift in Sources */,
 				184E9DC829ECB4CB000597DF /* SceneDelegate.swift in Sources */,
+				184E9DF629ECB8BF000597DF /* GPSViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
