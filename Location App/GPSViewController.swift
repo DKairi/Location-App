@@ -7,10 +7,16 @@
 
 import UIKit
 import CoreLocation
-class GPSViewController: UIViewController, CLLocationManagerDelegate {
+import WebKit
+import MessageUI
+class GPSViewController: UIViewController, CLLocationManagerDelegate, MFMessageComposeViewControllerDelegate {
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        
+    }
+    
 
     
-    @IBOutlet var distanceLabel: UILabel!
+    @IBOutlet var distanceLabel: UILabel?
     
     
     let locMan: CLLocationManager = CLLocationManager()
@@ -31,12 +37,12 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
             let miles: Double = (delta * 0.000621371) + 0.5
             if miles < 3 {
                 locMan.stopUpdatingLocation()
-                distanceLabel.text = " Enjoy\nFlorida!"
+                distanceLabel?.text = " Enjoy\nFlorida!"
                 
             }else {
                 let commaDelimited: NumberFormatter = NumberFormatter()
                 commaDelimited.numberStyle = NumberFormatter.Style.decimal
-                distanceLabel.text=commaDelimited.string(from: NSNumber(value: miles))!+" miles to Florida"
+                distanceLabel?.text=commaDelimited.string(from: NSNumber(value: miles))!+" miles to Florida"
             }
             
             
@@ -49,10 +55,31 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+   
+    @IBOutlet var webView: WKWebView?
+    
+    @IBAction func openSite(_ sender: Any) {
+        if let url = URL(string: "https://www.visitflorida.com"){
+                      UIApplication.shared.open(url, options:[:])
+                  }
+    }
     
     
     
     
+    @IBAction func sendMessage(_ sender: Any) {
+        let SMS = MFMessageComposeViewController()
+                SMS.messageComposeDelegate = self
+                
+                SMS.recipients = ["2404358990"]
+                SMS.body = "Hello message!"
+                
+                if MFMessageComposeViewController.canSendText() {
+                    self.present(SMS, animated:true, completion:nil)
+                }else{
+                    print("Cant send messages.")
+                }
+    }
     
     
     
@@ -71,7 +98,10 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
         locMan.startUpdatingLocation()
         startLocation = nil
         
-        
+        //load website
+        let myURL = URL(string: "https://www.visitflorida.com")
+        let myRequest = URLRequest(url: myURL!)
+       webView?.load(myRequest)
         
         
         
@@ -94,3 +124,10 @@ class GPSViewController: UIViewController, CLLocationManagerDelegate {
     */
 
 }
+
+
+
+
+
+
+

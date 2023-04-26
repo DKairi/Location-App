@@ -17,6 +17,7 @@
 		184E9DE729ECB4CC000597DF /* Location_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DE629ECB4CC000597DF /* Location_AppUITests.swift */; };
 		184E9DE929ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DE829ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift */; };
 		184E9DF629ECB8BF000597DF /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E9DF529ECB8BF000597DF /* GPSViewController.swift */; };
+		184E9E3529F5F561000597DF /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184E9E3429F5F561000597DF /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		184E9DE629ECB4CC000597DF /* Location_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_AppUITests.swift; sourceTree = "<group>"; };
 		184E9DE829ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		184E9DF529ECB8BF000597DF /* GPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
+		184E9E3429F5F561000597DF /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184E9E3529F5F561000597DF /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +88,7 @@
 				184E9DDB29ECB4CC000597DF /* Location AppTests */,
 				184E9DE529ECB4CC000597DF /* Location AppUITests */,
 				184E9DC329ECB4CB000597DF /* Products */,
+				184E9E3329F5F561000597DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +132,14 @@
 				184E9DE829ECB4CC000597DF /* Location_AppUITestsLaunchTests.swift */,
 			);
 			path = "Location AppUITests";
+			sourceTree = "<group>";
+		};
+		184E9E3329F5F561000597DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184E9E3429F5F561000597DF /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
